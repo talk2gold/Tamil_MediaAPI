@@ -6,13 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace MediaAPI.Controllers
 {
     //Type of Api call
-    //GET    --reading /getting record from api
-    //POST   --Create Records
-    //PUT    --Update Record
     //DELETE --Delete Record
-    //PATCH  --Update Partial record  -- only selected properties
-    [ApiController]
-    public class PocoMediaAPIController : ControllerBase
+	public class PocoMediaAPIController : ControllerBase
 	{
         [Route("api/PocoMediaAPI")]
         [HttpGet]
@@ -43,15 +38,7 @@ namespace MediaAPI.Controllers
             return Ok(pocoMedia);
         }
 
-
-
-
-        [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<PocoMediaDTO> CreateMedia([FromBody] PocoMediaDTO media)
-        {
+        { 
             //if (media == null)
             //{
             //    return BadRequest();
